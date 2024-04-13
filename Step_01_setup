@@ -1,6 +1,5 @@
 # You'll be copying and pasting this script into the command line. So...
-# Start an interactive session and wait to be logged in to a computer node
-
+# Start an interactive session.
 interactive -c 1 -p quanah
 
 # Move to your working directory for the project.
@@ -14,30 +13,29 @@ mkdir 02_vcf
 mkdir 03_vcf
 mkdir 04_filtered_vcf
 
-# Now transfer your raw data files for this project to the directory 00_fastq with scp OR just drag and drop w/ filezilla. 
-# Might take a few minutes bc these are very big files. 
+# Now transfer your raw data files for this project to 00_fastq with scp OR just drag and drop w/ filezilla. 
+# Might take a bit because these are very big files. 
 
-#### This'll include:
+#### This'll include ###########
 # 1) all the original raw Leiothlypis reads save for M2, M10, and M16 (because these ones failed/ were contaminated)
 # 2) Jack's raw reads for Geothlypis poliocephala (5 samples, 1 forward read and 1 reverse read for each)
-# 3) ruficapilla and peregrina redos (N16-N21). Each sample has 4 files, so list them in a redos.txt file and concat them w/ the following:
+# 3) ruficapilla and peregrina redos (N16-N21). Each sample has 4 files, so list them in a redos.txt file, concat them w/ the following, 
+# and put the originals somewhere else for safekeeping:
 while read -r redos; do
 	cat ${redos}_*R1_* >> ./${redos}_R1.fastq.gz
 	cat ${redos}_*R2_* >> ./${redos}_R2.fastq.gz
 done < redos.txt
 
-# Next, make a "rename" folder within 00_fastq, and add a rename_samples.txt file to it. This is to make the raw read names more informative. 
-
-# Create a rename_samples.txt with the old names in the left column and the new names in the right. Then run the following command:
+# Next, make a "rename" folder in 00_fastq, and add a rename_samples.txt file to it w/old names in the left column and the new names in the right. 
+# Copy the fastq files into it and run the following command:
 
 while read -r name1 name2; do mv $name1 $name2
 done < rename_samples.txt
 
-# If it worked, move the files, delete the folder, and delete the original ones. 
-mv * ..
-cd ..
-rm -r rename
-rm *L004*
+
+# If it worked, move the files one folder up, delete the rename folder, and delete the original fastq files 
+# (assuming they are safely & permanently stored somewhere else). 
 
 # Move back to your main directory. 
-# make a basenames.txt file and put it there. 
+
+# Make a basenames.txt file and put it there. 
