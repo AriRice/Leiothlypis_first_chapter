@@ -1,0 +1,24 @@
+# You'll be copying and pasting this script into the command line. So...
+# Start an interactive session and wait to be logged in to a computer node
+
+interactive -c 1 -p quanah
+
+# Move to your working directory for the project.
+cd /lustre/scratch/arrice/Leiothlypis2
+
+# Make directories for the analyses
+mkdir 00_fastq
+mkdir 01_cleaned
+mkdir 01_bam_files
+mkdir 02_vcf
+mkdir 03_vcf
+mkdir 04_filtered_vcf
+
+
+
+### not yet
+mkdir 05_admixture_and_pca
+mkdir 06_phylogenies_and_summstats
+mkdir 07_TreeMix
+mkdir 10_align_script
+mkdir 12_filter
