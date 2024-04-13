@@ -7,6 +7,7 @@ cd /lustre/scratch/arrice/Ch1_Leiothlypis
 
 # Make directories for the analyses
 mkdir 00_fastq
+mkdir 00_ref_genome
 mkdir 01_cleaned
 mkdir 01_bam_files
 mkdir 02_vcf
@@ -14,7 +15,7 @@ mkdir 03_vcf
 mkdir 04_filtered_vcf
 
 # Now transfer your raw data files for this project to 00_fastq with scp OR just drag and drop w/ filezilla. 
-# Might take a bit because these are very big files. 
+# Might take a bit because these are very big files.
 
 #### This'll include ###########
 # 1) all the original raw Leiothlypis reads save for M2, M10, and M16 (because these ones failed/ were contaminated)
@@ -39,3 +40,5 @@ done < rename_samples.txt
 # Move back to your main directory. 
 
 # Make a basenames.txt file and put it there. 
+
+# Now put the Yellowthroat reference genome in the 00_ref_genome folder. 
