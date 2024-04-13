@@ -14,11 +14,38 @@ mkdir 02_vcf
 mkdir 03_vcf
 mkdir 04_filtered_vcf
 
-
-
 ### not yet
 mkdir 05_admixture_and_pca
 mkdir 06_phylogenies_and_summstats
 mkdir 07_TreeMix
 mkdir 10_align_script
 mkdir 12_filter
+
+
+# Now transfer your raw data files for this project to the directory 00_fastq
+
+cp /wherever_the_files_are/*.gz /lustre/scratch/arrice/WBNU_project_round2/00_fastq
+
+# I use the cp command and not mv because I don't want to delete the files from their original locations. 
+# This might take a few minutes because these are very big files. 
+# You can check filezilla or open another terminal window to see the files being copied. 
+
+cd 00_fastq
+mkdir rename
+cp M* rename
+cd rename
+
+# Now you'll tweak the names a bit. Just to make them more informative.
+# Create a rename_samples.txt with the old names in the left column and the new names in the right. Then run the following command:
+
+while read -r name1 name2; do mv $name1 $name2
+done < rename_samples.txt
+
+# If it worked, move the files, delete the folder, and delete the original ones. 
+mv * ..
+cd ..
+rm -r rename
+rm *L004*
+
+# Move back to your main directory. 
+# make a basenames.txt file and put it there. 
