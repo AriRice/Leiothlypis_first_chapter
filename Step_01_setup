@@ -20,10 +20,10 @@ mkdir 04_filtered_vcf
 #### This'll include:
 # 1) all the original raw Leiothlypis reads save for M2, M10, and M16 (because these ones failed/ were contaminated)
 # 2) Jack's raw reads for Geothlypis poliocephala (5 samples, 1 forward read and 1 reverse read for each)
-# 3) ruficapilla and peregrina redos (N16-N21, which is 6 samples. Each sample has 4 files, so list them in a redos.txt file and concatenate them using the following script:
+# 3) ruficapilla and peregrina redos (N16-N21). Each sample has 4 files, so list them in a redos.txt file and concat them w/ the following:
 while read -r redos; do
-	cat ${redos}_*R1_* >> ../${redos}_R1.fastq.gz
-	cat ${redos}_*R2_* >> ../${redos}_R2.fastq.gz
+	cat ${redos}_*R1_* >> ./${redos}_R1.fastq.gz
+	cat ${redos}_*R2_* >> ./${redos}_R2.fastq.gz
 done < redos.txt
 
 # Next, make a "rename" folder within 00_fastq, and add a rename_samples.txt file to it. This is to make the raw read names more informative. 
