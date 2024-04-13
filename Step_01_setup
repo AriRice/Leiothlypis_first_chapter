@@ -14,30 +14,17 @@ mkdir 02_vcf
 mkdir 03_vcf
 mkdir 04_filtered_vcf
 
-### not yet
-mkdir 05_admixture_and_pca
-mkdir 06_phylogenies_and_summstats
-mkdir 07_TreeMix
-mkdir 10_align_script
-mkdir 12_filter
+# Now transfer your raw data files for this project to the directory 00_fastq with scp OR just drag and drop w/ filezilla. 
+# Might take a few minutes bc these are very big files. 
+
+#### This'll include:
+# 1) all the original raw Leiothlypis reads save for M2, M10, and M16 (because these ones failed/ were contaminated)
+# 2) ruficapilla and peregrina redos (N16-N21, which is 6 samples. 1 forward read and 1 reverse read each). 
+# 3) Jack's raw reads for Geothlypis poliocephala (5 samples, 1 forward read and 1 reverse read for each)
 
 
-# Now transfer your raw data files for this project to the directory 00_fastq
+# Next, make a "rename" folder within 00_fastq, and add a rename_samples.txt file to it. This is to make the raw read names more informative. 
 
-#### This includes all the original raw Leiothlypis reads save for M2, M10, and M16 (because these ones failed/ were contaminated)
-#### Also include the Geothlypis raw reads (5 samples, 1 forward read and 1 reverse read for each)
-#### Also include ruficapilla and peregrina redos (N16-N21, which is 6 samples. 1 forward read and 1 reverse read each). 
-
-# Use the cp command and not mv because you don't want to delete the files from their original locations. Or just drag + drop with filezilla. 
-# This might take a few minutes because these are very big files. 
-# You can check filezilla or open another terminal window to see the files being copied. 
-
-cd 00_fastq
-mkdir rename
-cp M* rename
-cd rename
-
-# Now you'll tweak the names a bit. Just to make them more informative.
 # Create a rename_samples.txt with the old names in the left column and the new names in the right. Then run the following command:
 
 while read -r name1 name2; do mv $name1 $name2
