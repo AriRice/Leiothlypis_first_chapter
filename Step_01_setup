@@ -4,7 +4,7 @@
 interactive -c 1 -p quanah
 
 # Move to your working directory for the project.
-cd /lustre/scratch/arrice/Leiothlypis2
+cd /lustre/scratch/arrice/Ch1_Leiothlypis
 
 # Make directories for the analyses
 mkdir 00_fastq
@@ -24,9 +24,11 @@ mkdir 12_filter
 
 # Now transfer your raw data files for this project to the directory 00_fastq
 
-cp /wherever_the_files_are/*.gz /lustre/scratch/arrice/WBNU_project_round2/00_fastq
+#### This includes all the original raw Leiothlypis reads save for M2, M10, and M16 (because these ones failed/ were contaminated)
+#### Also include the Geothlypis raw reads (5 samples, 1 forward read and 1 reverse read for each)
+#### Also include ruficapilla and peregrina redos (N16-N21, which is 6 samples. 1 forward read and 1 reverse read each). 
 
-# I use the cp command and not mv because I don't want to delete the files from their original locations. 
+# Use the cp command and not mv because you don't want to delete the files from their original locations. Or just drag + drop with filezilla. 
 # This might take a few minutes because these are very big files. 
 # You can check filezilla or open another terminal window to see the files being copied. 
 
