@@ -2,7 +2,7 @@
 #SBATCH --chdir=./
 #SBATCH --job-name=bam
 #SBATCH --partition quanah
-#SBATCH --nodes=1 --ntasks=12
+#SBATCH --nodes=1 --ntasks=19
 #SBATCH --time=48:00:00
 #SBATCH --mem-per-cpu=8G
 #SBATCH --array=1-38
