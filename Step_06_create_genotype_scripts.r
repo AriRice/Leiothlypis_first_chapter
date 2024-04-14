@@ -9,9 +9,9 @@ project_directory <- "/lustre/scratch/arrice/Leiothlypis"
 	reference_genome_location <- "/lustre/scratch/arrice/Ch1_Leiothlypis/00_ref_genome/ncbi_dataset/data/GCA_009764595.1/GCA_009764595.1_bGeoTri1.pri_genomic.fna"
 	cluster <- "quanah"
 	output_name <- "leiothlypis_genotype"
-	popmap <- "/lustre/scratch/arrice/Ch1_Leiothlypis/popmap.txt"
+	popmap <- "/lustre/scratch/arrice/Ch1_Leiothlypis/01_bam_files/popmap.txt"
 	individuals <- read.table(popmap, sep="\t")
-	faidx <- read.table("/lustre/scratch/arrice/Leiothlypis/Geothlypis_reference/ncbi_dataset/data/GCA_009764595.1/GCA_009764595.1_bGeoTri1.pri_genomic.fna.fai", stringsAsFactors=F)
+	faidx <- read.table("/lustre/scratch/arrice/Ch1_Leiothlypis/00_ref_genome/ncbi_dataset/data/GCA_009764595.1/GCA_009764595.1_bGeoTri1.pri_genomic.fna.fai", stringsAsFactors=F)
 	singularity_cache <- "/lustre/work/arrice/singularity-cachedir"
 	name_of_gatk_singularity_image <- "gatk_4.2.3.0.sif"
 
