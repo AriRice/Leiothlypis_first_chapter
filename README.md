@@ -10,4 +10,4 @@ How to do everything:
 
 4. Run the Step_04 script from the main working directory. Requires a popmap.txt file in the 01_bam_files folder. Make that first. 
 
-4b. Move the *depth.txt files and the leiothlypis_coverage.txt file into the 01_coverage folder, copy this folder to an external HD, and run Step_05_plot_coverage.r in R on the big desktop computer. 
+5. Move the *depth.txt files and the leiothlypis_coverage.txt file into the 01_coverage folder, copy this folder to an external HD, and run Step_05_plot_coverage.r in R on the big desktop computer. 
