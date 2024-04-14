@@ -1,8 +1,8 @@
-Geothlypis_poliocephala_KU_25093
-Geothlypis_poliocephala_KU_33403
-Geothlypis_poliocephala_KU_33414
-Geothlypis_poliocephala_KU_33542
-Geothlypis_poliocephala_KU_9041
+G_poliocephala_KU25093
+G_poliocephala_KU33403
+G_poliocephala_KU33414
+G_poliocephala_KU33542
+G_poliocephala_KU9041
 M1_luciae_1
 M3_crissalis_1
 M4_crissalis_2
@@ -11,13 +11,11 @@ M6_celata_1
 M7_crissalis_4
 M8_peregrina_1
 M9_peregrina_2
-M10_peregrina_3
 M11_ruficapilla_1
 M12_ruficapilla_2
 M13_celata_2
 M14_peregrina_4
 M15_celata_3
-M16_ruficapilla_3
 M17_ruficapilla_4
 M18_peregrina_5
 M19_celata_4
