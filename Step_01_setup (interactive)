@@ -10,6 +10,7 @@ mkdir 00_fastq
 mkdir 00_ref_genome
 mkdir 01_cleaned
 mkdir 01_bam_files
+mkdir 01_coverage
 mkdir 02_vcf
 mkdir 03_vcf
 mkdir 04_filtered_vcf
