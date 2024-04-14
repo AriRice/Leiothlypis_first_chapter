@@ -1,0 +1,8 @@
+# Run this interactively in the "08_align_script" folder
+
+for i in $( ls slurm* ); do
+echo $i;
+head -n1 $i >> filtering.txt;
+grep "Input:" $i >> filtering.txt;
+grep "Result:" $i >> filtering.txt;
+done
