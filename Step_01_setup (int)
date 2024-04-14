@@ -18,7 +18,8 @@ mkdir 05_admixture_and_pca
 mkdir 06_phylogenies_and_summstats
 mkdir 07_TreeMix
 mkdir 08_align_script
-mkdir 09_filter
+mkdir 09_genotype_scripts
+mkdir 10_filter
 
 # Now transfer your raw data files for this project to 00_fastq with scp OR just drag and drop w/ filezilla. 
 # Might take a bit because these are very big files.
