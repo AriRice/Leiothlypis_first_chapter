@@ -47,4 +47,10 @@ done < rename_samples.txt
 
 # Make a basenames.txt file and put it there. 
 
-# Now put the Yellowthroat reference genome in the 00_ref_genome folder. 
+# Now put the Yellowthroat reference genome in the 00_ref_genome folder (inside all the folders it comes in). 
+# Index it! 
+# index the reference genome (the .fna file) from within the innermost folder. Should take ~20 minutes. 
+module load samtools
+module load bwa
+samtools faidx -f GCA_009764595.1_bGeoTri1.pri_genomic.fna -o GCA_009764595.1_bGeoTri1.pri_genomic.fna
+bwa index GCA_009764595.1_bGeoTri1.pri_genomic.fna
