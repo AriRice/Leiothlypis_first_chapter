@@ -27,8 +27,7 @@ mkdir 10_filter
 #### This'll include ###########
 # 1) all the original raw Leiothlypis reads save for M2, M10, and M16 (because these ones failed/ were contaminated)
 # 2) Jack's raw reads for Geothlypis poliocephala (5 samples, 1 forward read and 1 reverse read for each)
-# 3) ruficapilla and peregrina redos (N16-N21). Each sample has 4 files, so list them in a redos.txt file, concat them w/ the following, 
-# and put the originals somewhere else for safekeeping:
+# 3) ruficapilla and peregrina redos (N16-N21). Each sample has 4 files, so list them in a redos.txt file, concat them w/ the following:
 while read -r redos; do
 	cat ${redos}_*R1_* >> ./${redos}_R1.fastq.gz
 	cat ${redos}_*R2_* >> ./${redos}_R2.fastq.gz
