@@ -5,11 +5,11 @@ R
 options(scipen=999)
 
 project_directory <- "/lustre/scratch/arrice/Leiothlypis"
-	directory_name <- "11_genotype_scripts"
-	reference_genome_location <- "/lustre/scratch/arrice/Leiothlypis/Geothlypis_reference/ncbi_dataset/data/GCA_009764595.1/GCA_009764595.1_bGeoTri1.pri_genomic.fna"
+	directory_name <- "09_genotype_scripts"
+	reference_genome_location <- "/lustre/scratch/arrice/Ch1_Leiothlypis/00_ref_genome/ncbi_dataset/data/GCA_009764595.1/GCA_009764595.1_bGeoTri1.pri_genomic.fna"
 	cluster <- "quanah"
 	output_name <- "leiothlypis_genotype"
-	popmap <- "/lustre/scratch/arrice/Leiothlypis/01_bam_files/popmap.txt"
+	popmap <- "/lustre/scratch/arrice/Ch1_Leiothlypis/popmap.txt"
 	individuals <- read.table(popmap, sep="\t")
 	faidx <- read.table("/lustre/scratch/arrice/Leiothlypis/Geothlypis_reference/ncbi_dataset/data/GCA_009764595.1/GCA_009764595.1_bGeoTri1.pri_genomic.fna.fai", stringsAsFactors=F)
 	singularity_cache <- "/lustre/work/arrice/singularity-cachedir"
