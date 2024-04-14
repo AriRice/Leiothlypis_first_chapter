@@ -1,5 +1,5 @@
-M1_S1_L004_R1.fastq.gz	M1_luciae_1_R1.fastq.gz
-M1_S1_L004_R2.fastq.gz	M1_luciae_1_R2.fastq.gz
+M1_S1_L004_R1_001.fastq.gz	M1_luciae_1_R1.fastq.gz
+M1_S1_L004_R2_001.fastq.gz	M1_luciae_1_R2.fastq.gz
 M3_S2_L004_R1_001.fastq.gz	M3_crissalis_1_R1.fastq.gz
 M3_S2_L004_R2_001.fastq.gz	M3_crissalis_1_R2.fastq.gz
 M4_S3_L004_R1_001.fastq.gz	M4_crissalis_2_R1.fastq.gz
