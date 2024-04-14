@@ -1,13 +1,3 @@
-1_R1.fastq.gz   Geothlypis_poliocephala_KU_9041_CHAL_R1.fastq.gz
-1_R2.fastq.gz   Geothlypis_poliocephala_KU_9041_CHAL_R2.fastq.gz
-2_R1.fastq.gz   Geothlypis_poliocephala_KU_25093_AHUA_R1.fastq.gz
-2_R2.fastq.gz   Geothlypis_poliocephala_KU_25093_AHUA_R2.fastq.gz
-3_R1.fastq.gz   Geothlypis_poliocephala_KU_33403_NSG_R1.fastq.gz
-3_R2.fastq.gz   Geothlypis_poliocephala_KU_33403_NSG_R2.fastq.gz
-4_R1.fastq.gz   Geothlypis_poliocephala_KU_33414_NSG_R1.fastq.gz
-4_R2.fastq.gz   Geothlypis_poliocephala_KU_33414_NSG_R2.fastq.gz
-5_R1.fastq.gz   Geothlypis_poliocephala_KU_33542_ALA_R1.fastq.gz
-5_R2.fastq.gz   Geothlypis_poliocephala_KU_33542_ALA_R2.fastq.gz
 M1_S1_L004_R1.fastq.gz	M1_luciae_1_R1.fastq.gz
 M1_S1_L004_R2.fastq.gz	M1_luciae_1_R2.fastq.gz
 M3_S2_L004_R1_001.fastq.gz	M3_crissalis_1_R1.fastq.gz
