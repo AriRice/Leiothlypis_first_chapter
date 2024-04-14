@@ -1,0 +1,7 @@
+# Get an interactive session
+# Navigate to the folder with the reference genome. 
+
+module load samtools
+samtools dict GCA_009764595.1_bGeoTri1.pri_genomic.fna -o GCA_009764595.1_bGeoTri1.pri_genomic.dict
+
+# This makes a .dict file for haplotypecaller to work with in the step1_array script that'll be created in the next step. 
