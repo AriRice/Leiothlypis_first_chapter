@@ -8,4 +8,4 @@ How to do everything:
 
 3) Run step 3 interactively from the 08_align_script folder. 
 
-4) Run the Step_04a script from the main working directory. Requires a popmap.txt file in the 01_bam_files folder. Make that before you run this as a submission script.
+4) Run the Step_04a script from the main working directory. Requires a popmap.txt file in the 01_bam_files folder. Make that first. 
