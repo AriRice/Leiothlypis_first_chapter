@@ -10,7 +10,6 @@
 #SBATCH --mail-type=ALL
 #SBATCH --array=1-38
 
-
 module load intel/18.0.3.222 bcftools/1.9
 
 # define main working directory
