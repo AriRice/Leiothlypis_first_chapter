@@ -28,3 +28,6 @@ while read -r name1 number1; do
 	number2=$((number1 + 2));
   cut leiothlypis_coverage.txt -f $number2 > ${name1}_depth.txt;
 done < popmap.txt
+
+mv leiothlypis_coverage.txt ../01_coverage
+mv *depth.txt ../01_coverage
