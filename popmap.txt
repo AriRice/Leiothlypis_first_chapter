@@ -31,8 +31,8 @@ N18_ruficapilla_6	30
 N19_ruficapilla_7	31
 N20_ruficapilla_8	32
 N21_ruficapilla_9	33
-Geothlypis_poliocephala_KU_25093	34
-Geothlypis_poliocephala_KU_33403	35
-Geothlypis_poliocephala_KU_33414	36
-Geothlypis_poliocephala_KU_33542	37
-Geothlypis_poliocephala_KU_9041	38
+G_poliocephala_KU25093	34
+G_poliocephala_KU33403	35
+G_poliocephala_KU33414	36
+G_poliocephala_KU33542	37
+G_poliocephala_KU9041	38
