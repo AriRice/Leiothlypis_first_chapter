@@ -37,6 +37,13 @@ refgenome=${workdir}/00_ref_genome/ncbi_dataset/data/GCA_009764595.1/GCA_0097645
 # "tbo" Not sure what this does.  
 # "tpe" Trims both reads to the same length in case a kmer was only detected in one of them. 
 
+# run bbsplit
+/lustre/work/jmanthey/bbmap/bbsplit.sh in1=${workdir}/01_cleaned/${basename_array}_R1.fastq.gz in2=${workdir}/01_cleaned/${basename_array}_R2.fastq.gz ref=${mito} basename=${workdir}/01b_mtDNA/${basename_array}_%.fastq.gz outu1=${workdir}/01_mtDNA/${basename_array}_R1.fastq.gz outu2=${workdir}/01b_mtDNA/${basename_array}_R2.fastq.gz
+
+# remove unnecessary bbsplit output files
+rm ${workdir}/01b_mtDNA/${basename_array}_R1.fastq.gz
+rm ${workdir}/01b_mtDNA/${basename_array}_R2.fastq.gz
+
 bwa mem -t 12 ${refgenome} ${workdir}/01_cleaned/${basename_array}_R1.fastq.gz ${workdir}/01_cleaned/${basename_array}_R2.fastq.gz > ${workdir}/01_bam_files/${basename_array}.sam
 # This maps sequences to the reference genome. 
 # -t denotes number of threads. 
