@@ -6,7 +6,7 @@
 #SBATCH --partition=nocona
 #SBATCH --time=48:00:00
 #SBATCH --mem-per-cpu=8G
-#SBATCH --array=1-31
+#SBATCH --array=1-32
 
 module load intel/18.0.3.222 bcftools/1.9
 
