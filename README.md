@@ -16,4 +16,4 @@ How to do everything:
 
 7. Make the genotyping script in 09_genotyping_scripts. Run it from that folder. 
 
-8. Create the scaffolds.txt file in the main directory (All ref. chromosomes >1 mbp, as seen in the .dict file from step 6). Then run Step_08_merge_vcfs.sh. 
+8. Create the scaffolds.txt file in the main directory (All ref. chromosomes >1 mbp, as seen in the .dict file from step 6). Then run Step_08_merge_vcfs.sh from the genotyping scripts folder. 
