@@ -11,7 +11,7 @@
 module load intel/18.0.3.222 bcftools/1.9
 
 # define main working directory
-workdir=/lustre/scratch/arrice?Ch1_Leiothlypis
+workdir=/lustre/scratch/arrice/Ch1_Leiothlypis
 
 # define variables
 region_array=$( head -n${SLURM_ARRAY_TASK_ID} ${workdir}/scaffolds.txt | tail -n1 )
