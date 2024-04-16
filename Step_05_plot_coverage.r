@@ -33,4 +33,4 @@ for(a in 1:length(output2)) {
 	plot(0:51, output2[[a]], pch=19, cex=0.1, xlab="Coverage", ylab="Proportion of Leiothlypis genome", main=sample_names[a], ylim=c(0,0.14))
 	poly.plot <- rbind(cbind(0:51, output2[[a]]), c(51, 0), c(0,0))
 	polygon(poly.plot, col="gray")
-	abline(v=mean_coverage[a], col="red")
+	abline(v=mean_coverage[a], col="red")}
