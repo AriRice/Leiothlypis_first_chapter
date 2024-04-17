@@ -19,4 +19,4 @@ workdir=/lustre/scratch/arrice/Ch1_Leiothlypis
 region_array=$( head -n${SLURM_ARRAY_TASK_ID} ${workdir}/scaffolds.txt | tail -n1 )
 
 # run bcftools to merge the vcf files
-bcftools merge -m id --regions ${region_array} ${workdir}/03_vcf/*vcf.gz > ${workdir}/03b_vcf/${region_array}.vcf
+bcftools merge -m id --regions ${region_array} ${workdir}/03_vcf/*vcf.gz > ${workdir}/04_filtered_vcf/${region_array}.vcf
