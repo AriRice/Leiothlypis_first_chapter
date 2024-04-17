@@ -41,7 +41,7 @@ refgenome=${workdir}/00_ref_genome/ncbi_dataset/data/GCA_009764595.1/GCA_0097645
 mito=${workdir}/01b_mtDNA/songbird_mitogenomes.fasta
 
 # run bbsplit
-/lustre/work/jmanthey/bbmap/bbsplit.sh in1=${workdir}/01_cleaned/${basename_array}_R1.fastq.gz in2=${workdir}/01_cleaned/${basename_array}_R2.fastq.gz ref=${mito} basename=${workdir}/01b_mtDNA/${basename_array}_%.fastq.gz outu1=${workdir}/01_mtDNA/${basename_array}_R1.fastq.gz outu2=${workdir}/01b_mtDNA/${basename_array}_R2.fastq.gz
+/lustre/work/jmanthey/bbmap/bbsplit.sh in1=${workdir}/01_cleaned/${basename_array}_R1.fastq.gz in2=${workdir}/01_cleaned/${basename_array}_R2.fastq.gz ref=${mito} basename=${workdir}/01b_mtDNA/${basename_array}_%.fastq.gz outu1=${workdir}/01b_mtDNA/${basename_array}_R1.fastq.gz outu2=${workdir}/01b_mtDNA/${basename_array}_R2.fastq.gz
 
 # remove unnecessary bbsplit output files
 rm ${workdir}/01b_mtDNA/${basename_array}_R1.fastq.gz
