@@ -14,7 +14,6 @@ mkdir 01_coverage
 mkdir 01b_mtDNA
 mkdir 02_vcf
 mkdir 03_vcf
-mkdir 03b_vcf
 mkdir 04_filtered_vcf
 mkdir 05_admixture_and_pca
 mkdir 06_phylogenies_and_summstats
