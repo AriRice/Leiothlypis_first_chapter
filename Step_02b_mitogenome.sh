@@ -18,7 +18,7 @@ basename_array=$( head -n${SLURM_ARRAY_TASK_ID} ${workdir}/basenames.txt | tail 
 mito=${workdir}/01b_mtDNA/songbird_mitogenomes.fasta
 
 # run bbsplit
-/lustre/work/jmanthey/bbmap/bbsplit.sh in1=${workdir}/01_cleaned/${basename_array}_R1.fastq.gz in2=${workdir}/01_cleaned/${basename_array}_R2.fastq.gz ref=${mito} basename=${workdir}/01b_mtDNA/${basename_array}_%.fastq.gz outu1=${workdir}/01_mtDNA/${basename_array}_R1.fastq.gz outu2=${workdir}/01b_mtDNA/${basename_array}_R2.fastq.gz
+/lustre/work/jmanthey/bbmap/bbsplit.sh in1=${workdir}/01_cleaned/${basename_array}_R1.fastq.gz in2=${workdir}/01_cleaned/${basename_array}_R2.fastq.gz ref=${mito} basename=${workdir}/01b_mtDNA/${basename_array}_%.fastq.gz outu1=${workdir}/01b_mtDNA/${basename_array}_R1.fastq.gz outu2=${workdir}/01b_mtDNA/${basename_array}_R2.fastq.gz
 
 # remove unnecessary bbsplit output files
 rm ${workdir}/01b_mtDNA/${basename_array}_R1.fastq.gz
