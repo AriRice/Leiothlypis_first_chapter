@@ -16,6 +16,7 @@ mkdir 02_vcf
 mkdir 03_vcf
 mkdir 04_filtered_vcf
 mkdir 05_admixture_and_pca
+mkdir 05b_contamination_check
 mkdir 06_phylogenies_and_summstats
 mkdir 07_TreeMix
 mkdir 08_align_script
