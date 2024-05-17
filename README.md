@@ -19,7 +19,7 @@ How to do everything:
 8. Create the scaffolds.txt file in the main directory (All ref. chromosomes >1 mbp, as seen in the .dict file from step 6). Then run Step_08_merge_vcfs.sh from the genotyping scripts folder. 
 
 9. Make/run "Step_09_admixpca_filter.sh" in the 10_filter folder. Requires an "outgroup.txt" file in the same folder.
+    
+10. Run "Step_10_whole_genome_admixture" interactively within the "05_admixture_and_pca" directory. This will generate two files ("50kbpthin_plink_pca.eigenvec" and "50kbpthin_plink_pca.eigenval") that can be transferred to a local computer and inputted into RStudio (Plot_PCA_Leiothlypis.R) to generate PCA plots. For the admixture data, the last two lines can be run with different values of K to generate different "Q" files. Those can then be transferred to a local computer and inputted into RStudio (01_AAR_admixture.R) to generate admixture plots.
 
-    a. dfdfdf
-
-11. 
+    (optional step) Go back to the filter folder, run "Contam_check_filter.sh", 
