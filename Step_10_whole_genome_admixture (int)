@@ -1,0 +1,29 @@
+# start interactive session
+interactive -p quanah
+
+# combine all chromosome vcfs into one vcf (you can do all of this for the unthinned dataset as well, but it takes forever and is not as useful)
+# 50kbp thinning
+grep "#" CM019901__structure_50kbpthin.recode.vcf > 50kbpthin.vcf
+for i in $( ls *structure_50kbpthin* ); do grep -v "#" $i >> 50kbpthin.vcf; done
+
+# make chromosome map for the vcfs
+grep -v "#" 50kbpthin.vcf | cut -f 1 | uniq | awk '{print $0"\t"$0}' > chrom_map.txt
+
+# run vcftools for the combined vcf
+vcftools --vcf 50kbpthin.vcf  --plink --chrom-map chrom_map.txt --out 50kbpthin 
+
+# convert with plink (the old version bc I've had errors with Plink2)
+conda activate plink
+
+# 50kbp thinning
+plink --file 50kbpthin --recode12 --allow-extra-chr --out 50kbpthin_plink
+
+# run pca
+plink --file 50kbpthin_plink --pca --allow-extra-chr --out 50kbpthin_plink_pca
+
+# run admixture
+for K in 6; do admixture --cv 50kbpthin_plink.ped $K; done
+for K in 5; do admixture --cv 50kbpthin_plink.ped $K; done
+for K in 4; do admixture --cv 50kbpthin_plink.ped $K; done
+for K in 3; do admixture --cv 50kbpthin_plink.ped $K; done
+for K in 2; do admixture --cv 50kbpthin_plink.ped $K; done
