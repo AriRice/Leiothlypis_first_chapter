@@ -16,7 +16,7 @@ How to do everything:
 
 7. Make the genotyping script in 09_genotyping_scripts. Run it from that folder.
 
-    7b. Transfer the histogram PDFs to a local computer and make sure there's nothing weird going on with them (First contamination check)
+    7.1. Transfer the histogram PDFs to a local computer and make sure there's nothing weird going on with them (First contamination check)
 
 8. Create the scaffolds.txt file in the main directory (All ref. chromosomes >1 mbp, as seen in the .dict file from step 6). Then run Step_08_merge_vcfs.sh from the genotyping scripts folder. 
 
@@ -24,6 +24,6 @@ How to do everything:
     
 10. Run "Step_10_whole_genome_admixture" interactively within the "05_admixture_and_pca" directory. This will generate two files ("50kbpthin_plink_pca.eigenvec" and "50kbpthin_plink_pca.eigenval") that can be transferred to a local computer and inputted into RStudio (Plot_PCA_Leiothlypis.R) to generate PCA plots. For the admixture data, the last two lines can be run with different values of K to generate different "Q" files. Those can then be transferred to a local computer and inputted into RStudio (01_AAR_admixture.R) to generate admixture plots. This is the second check for contamination/ funny business. 
 
-    10a. Go back to the filter folder, run "Contam_check_filter.sh", and follow the instructions within the 05b folder in case your admixture/pca results were weird and you suspect contamination. NOTE: I couldn't get this to work, so I skipped it. 
+    10.1. Go back to the filter folder, run "Contam_check_filter.sh", and follow the instructions within the 05b folder in case your admixture/pca results were weird and you suspect contamination. NOTE: I couldn't get this to work, so I skipped it. 
 
 11. Choose 1 peregrina and 2 ruficapilla to remove from the next few datasets (and maybe re-run admixture and PCA without them?).... or just ignore for now and run the next big filtering script with them included (we'll change it later)
