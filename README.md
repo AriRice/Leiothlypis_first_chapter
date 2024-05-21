@@ -15,6 +15,7 @@ How to do everything:
 6. Run step 06 interactively if you don't already have a .dict file available for your reference genome. (Note that this step can be done any point before you do the genotyping).
 
 7. Make the genotyping script in 09_genotyping_scripts. Run it from that folder. 
+7a. Transfer the histogram PDFs to a local computer and make sure there's nothing weird going on with them (First contamination check)
 
 8. Create the scaffolds.txt file in the main directory (All ref. chromosomes >1 mbp, as seen in the .dict file from step 6). Then run Step_08_merge_vcfs.sh from the genotyping scripts folder. 
 
