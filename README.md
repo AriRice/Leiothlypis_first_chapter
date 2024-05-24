@@ -26,4 +26,6 @@ How to do everything:
 
     10.1. Go back to the filter folder, run "Contam_check_filter.sh", and follow the instructions within the 05b folder in case your admixture/pca results were weird and you suspect contamination. NOTE: I couldn't get this to work, so I skipped it. 
 
-11. Choose 1 peregrina and 2 ruficapilla to remove from the next few datasets (and maybe re-run admixture and PCA without them?).... or just ignore for now and run the next big filtering script with them included (we'll change it later)
+11. Choose 1 peregrina and 2 ruficapilla to remove from the next few datasets. List them in a file called "excluded_samples.txt"
+
+    11.1. Run the "Step_11_filter_everything_else.sh" script.  
