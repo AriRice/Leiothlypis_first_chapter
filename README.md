@@ -24,8 +24,15 @@ How to do everything:
     
 10. Run "Step_10_whole_genome_admixture" interactively within the "05_admixture_and_pca" directory. This will generate two files ("50kbpthin_plink_pca.eigenvec" and "50kbpthin_plink_pca.eigenval") that can be transferred to a local computer and inputted into RStudio (Plot_PCA_Leiothlypis.R) to generate PCA plots. For the admixture data, the last two lines can be run with different values of K to generate different "Q" files. Those can then be transferred to a local computer and inputted into RStudio (01_AAR_admixture.R) to generate admixture plots. This is the second check for contamination/ funny business. 
 
-    10.1. Go back to the filter folder, run "Contam_check_filter.sh", and follow the instructions within the 05b folder in case your admixture/pca results were weird and you suspect contamination. NOTE: I couldn't get this to work, so I skipped it. 
+    10.1. Go back to the filter folder, run "Contam_check_filter.sh", and enter the 05b folder in case your admixture/pca results were weird and you suspect contamination.
 
-11. Choose 1 peregrina and 2 ruficapilla to remove from the next few datasets. List them in a file called "excluded_samples.txt"
+    10.2. Merge the VCFs, put 4 scripts into this folder ("01a_leiothlypis_contamination_test.sh", "01_leiothlypis_contamination_test.sh", "checkHetsIndvVCF.sh", and "contamination_check.R"), and execute 01_leiothlypis_contamination_test.sh. 
+
+    10.3. Execute 01a_leiothlypis_contamination_test.sh. This'll create a PDF.
+
+    10.4. View the PDF. 
+    
+
+12. Choose 1 peregrina and 2 ruficapilla to remove from the next few datasets. List them in a file called "excluded_samples.txt"
 
     11.1. Run the "Step_11_filter_everything_else.sh" script.  
