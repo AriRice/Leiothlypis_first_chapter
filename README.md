@@ -28,11 +28,12 @@ How to do everything:
 
     10.2. Merge the VCFs, put 4 scripts into this folder ("01a_leiothlypis_contamination_test.sh", "01_leiothlypis_contamination_test.sh", "checkHetsIndvVCF.sh", and "contamination_check.R"), and execute 01_leiothlypis_contamination_test.sh. 
 
-    10.3. Execute 01a_leiothlypis_contamination_test.sh. This'll create a PDF.
+    10.3. Execute 01a_leiothlypis_contamination_test.sh. This'll create a PDF that you can 
 
     10.4. View the PDF. 
-    
 
-12. Choose 1 peregrina and 2 ruficapilla to remove from the next few datasets. List them in a file called "excluded_samples.txt"
+11. Choose 1 peregrina and 2 ruficapilla to remove from the next few datasets. List them in a file called "excluded_samples.txt"
 
-    11.1. Run the "Step_11_filter_everything_else.sh" script.  
+    11.1. Run the "Step_11_filter_everything_else.sh" script.
+
+12.     
