@@ -27,13 +27,21 @@ Contains everything from the previous 3 Leiothlypis repositories... but better.
 
     10.2. Merge the VCFs, put 4 scripts into this folder ("01a_leiothlypis_contamination_test.sh", "01_leiothlypis_contamination_test.sh", "checkHetsIndvVCF.sh", and "contamination_check.R"), and execute 01_leiothlypis_contamination_test.sh. 
 
-    10.3. Execute 01a_leiothlypis_contamination_test.sh. This'll create a PDF that you can 
+    10.3. Execute 01a_leiothlypis_contamination_test.sh.
 
-    10.4. View the PDF. 
+    10.4. Export and view the resulting PDF. 
 
 11. Choose 1 peregrina and 2 ruficapilla to remove from the next few datasets. List them in a file called "excluded_samples.txt"
 
     11.1. Run the "Step_11_filter_everything_else.sh" script.
 
-# Phylogenies
-1. 
+# Phylogenies and whole-genome stats
+1. Excecute Step_01_phylostats_50kbp.r in R. This will write an array job submission script (phylo50kbp_array.sh) and 3 helper files in /06_phylogenies_and_summstats/.
+
+2. Go to this folder and add 4 more R scripts (calculate_windows, create_fasta, create_fasta_from_vcf, and window_stat_calculations). No need to modify them.
+
+   2.1. Add popmap_phylo.txt to this folder.
+
+   2.2. Add a subfolder called "windows".
+
+3. Execute phylo50kbp_array.sh. This'll take awhile. 
