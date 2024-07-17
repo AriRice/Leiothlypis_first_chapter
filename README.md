@@ -1,7 +1,6 @@
-# Leiothlypis_first_chapter
 Contains everything from the previous 3 Leiothlypis repositories... but better. 
 
-How to do the aligning, filtering, and genotyping:
+# Aligning, filtering, and genotyping
 1. Run Step 1 interactively. Follow ALL the directions. 
 
 2. Run the alignment script (step 2) from the 08_align_script folder.
@@ -36,5 +35,6 @@ How to do the aligning, filtering, and genotyping:
 
     11.1. Run the "Step_11_filter_everything_else.sh" script.
 
-***********************************
-**** FOR PHYLOGENIES ****
+# Phylogenies
+
+1. 
