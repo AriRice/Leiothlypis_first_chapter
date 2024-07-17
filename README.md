@@ -36,4 +36,5 @@ How to do the aligning, filtering, and genotyping:
 
     11.1. Run the "Step_11_filter_everything_else.sh" script.
 
+***********************************
 **** FOR PHYLOGENIES ****
