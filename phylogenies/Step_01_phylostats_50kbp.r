@@ -66,7 +66,7 @@
 	write("#!/bin/sh", file=a.script)
 	write("#SBATCH --chdir=./", file=a.script, append=T)
 	write(paste("#SBATCH --job-name=", "phylo", sep=""), file=a.script, append=T)
-	write("#SBATCH --nodes=1 --ntasks=2", file=a.script, append=T)
+	write("#SBATCH --nodes=1 --ntasks=10", file=a.script, append=T)
 	write(paste("#SBATCH --partition ", cluster, sep=""), file=a.script, append=T)
 	write("#SBATCH --time=48:00:00", file=a.script, append=T)
 	write("#SBATCH --mem-per-cpu=8G", file=a.script, append=T)
