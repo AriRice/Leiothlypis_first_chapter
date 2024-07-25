@@ -12,7 +12,7 @@
 
 module load intel/18.0.3.222 bcftools/1.9
 module load intel R
-module load intel/18.0.3.222 bcftools/1.9
+module load intel/18.0.3.222 vcftools/0.1.16
 
 # define main working directory
 workdir=/lustre/scratch/arrice/Ch1_Leiothlypis
