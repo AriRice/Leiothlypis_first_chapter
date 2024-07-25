@@ -8,7 +8,7 @@ cat windows/RAxML_bipartitions.CM0199* >> final_tree_products/Leiothlypis_50kbp.
 
 ## maximum clade credibility tree (simple summarization) from all gene trees using dendropy:
 ## gives info about which nodes have support from what proportion of gene trees
-cd final_tree_products
+cd final_tree_products/
 conda activate dendropy
 sumtrees.py --output=leiothlypis_50kbp.tre --min-clade-freq=0.05 Leiothlypis_50kbp.trees 
 
