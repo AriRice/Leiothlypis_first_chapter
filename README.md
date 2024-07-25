@@ -44,4 +44,6 @@ Contains everything from the previous 3 Leiothlypis repositories... but better.
 
    2.2. Add a subfolder called "windows".
 
-3. Execute phylo50kbp_array.sh. This'll take awhile. 
+3. Execute phylo50kbp_array.sh. This'll take awhile (at least 1 day).
+
+4. 
