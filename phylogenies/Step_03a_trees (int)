@@ -1,4 +1,9 @@
 ## Get an interactive session with at least 4 cores. 
+
+## Delete tree files associated with the sex chromosomes
+rm windows/RAxML_bipartitions.CM019933*.tre
+rm windows/RAxML_bipartitions.CM019934*.tre
+
 ## Make a new folder in phylostats called "final_tree_products"
 
 cat windows/RAxML_bipartitions.CM0199* >> final_tree_products/Leiothlypis_50kbp.trees
