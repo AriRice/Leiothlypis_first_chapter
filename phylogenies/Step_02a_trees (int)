@@ -12,9 +12,7 @@ cd final_tree_products/
 conda activate dendropy
 sumtrees.py --output=leiothlypis_50kbp.tre --min-clade-freq=0.05 Leiothlypis_50kbp.trees 
 
-# coalescent tree of all gene trees using ASTRAL III
-# automatically calculates local branch support using quartets, described here: https://doi.org/10.1093/molbev/msw079
+## coalescent tree of all gene trees using ASTRAL III
+## automatically calculates local branch support using quartets, described here: https://doi.org/10.1093/molbev/msw079
 java -jar /lustre/work/arrice/Astral/astral.5.7.8.jar -i Leiothlypis_50kbp.trees -o leiothlypis_50kbp_astral.tre 2> leiothlypis_50kbp_astral.log
-
-# Another thing for generating single-tip trees (one per species)
-java -jar /lustre/work/arrice/Astral/astral.5.7.8.jar -i Leiothlypis_50kbp.trees -o leiothlypis_50kbp_multiind_astral.tre -a mapfile.txt 2> leiothlypis_50kbp_multiind_astral.log
+## this will also take a few minutes. 
