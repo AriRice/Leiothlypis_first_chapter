@@ -2,14 +2,14 @@
 #SBATCH --chdir=./
 #SBATCH --job-name=Ch1_filter_admixture_pca
 #SBATCH --nodes=1 --ntasks=1
-#SBATCH --partition quanah
+#SBATCH --partition nocona
 #SBATCH --time=48:00:00
 #SBATCH --mem-per-cpu=8G
 #SBATCH --array=1-32
 #SBATCH --mail-user=arrice@ttu.edu
 #SBATCH --mail-type=ALL
 
-module load intel/18.0.3.222 vcftools/0.1.16
+conda activate vcftools
 
 # define main working directory
 workdir=/lustre/scratch/arrice/Ch1_Leiothlypis
