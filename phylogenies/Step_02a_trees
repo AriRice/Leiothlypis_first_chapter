@@ -1,0 +1,20 @@
+## Get an interactive session with at least 4 cores. 
+## Make a new folder in phylostats called "final_tree_products"
+
+cat windows/RAxML_bipartitions.CM0199* >> final_tree_products/Leiothlypis_50kbp.trees
+## This might take a few minutes. 
+### For making a densitree plot, you might also want to run dendropy on Leiothlypis_50kbp.trees to collapse branches that have less than 50% bootstrap support. 
+### FIGURE OUT HOW TO DO THAT!!!!!!
+
+## maximum clade credibility tree (simple summarization) from all gene trees using dendropy:
+## gives info about which nodes have support from what proportion of gene trees
+cd final_tree_products
+conda activate dendropy
+sumtrees.py --output=leiothlypis_50kbp.tre --min-clade-freq=0.05 Leiothlypis_50kbp.trees 
+
+# coalescent tree of all gene trees using ASTRAL III
+# automatically calculates local branch support using quartets, described here: https://doi.org/10.1093/molbev/msw079
+java -jar /lustre/work/arrice/Astral/astral.5.7.8.jar -i Leiothlypis_50kbp.trees -o leiothlypis_50kbp_astral.tre 2> leiothlypis_50kbp_astral.log
+
+# Another thing for generating single-tip trees (one per species)
+java -jar /lustre/work/arrice/Astral/astral.5.7.8.jar -i Leiothlypis_50kbp.trees -o leiothlypis_50kbp_multiind_astral.tre -a mapfile.txt 2> leiothlypis_50kbp_multiind_astral.log
