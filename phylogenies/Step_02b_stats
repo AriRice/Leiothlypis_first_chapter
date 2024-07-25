@@ -1,0 +1,19 @@
+# Get an interactive session
+# Create a folder in phylostats called "summary_statistics"
+# Navigate to the windows folder
+
+# add header for heterozygosity and fst stats files
+grep 'pop1' CM019901.1__100001__150000__stats.txt > ../summary_statistics/window_heterozygosity.txt
+grep 'pop1' CM019901.1__100001__150000__stats.txt > ../summary_statistics/window_fst.txt
+grep 'pop1' CM019901.1__100001__150000__stats.txt > ../summary_statistics/window_Dxy.txt
+grep 'pop1' CM019901.1__100001__150000__stats.txt > ../summary_statistics/window_Tajima.txt
+grep 'pop1' CM019901.1__100001__150000__stats.txt > ../summary_statistics/window_theta.txt
+grep 'pop1' CM019901.1__100001__150000__stats.txt > ../summary_statistics/window_pi.txt
+
+# pull out only the relevant stat for each file
+for i in $( ls *stats.txt ); do grep 'heterozygosity' $i >> ../summary_statistics/window_heterozygosity.txt; done
+for i in $( ls *stats.txt ); do grep 'Fst' $i >> ../summary_statistics/window_fst.txt; done
+for i in $( ls *stats.txt ); do grep 'Tajima_D' $i >> ../summary_statistics/window_Tajima.txt; done
+for i in $( ls *stats.txt ); do grep 'Dxy' $i >> ../summary_statistics/window_Dxy.txt; done
+for i in $( ls *stats.txt ); do grep 'theta' $i >> ../summary_statistics/window_theta.txt; done
+for i in $( ls *stats.txt ); do grep -w 'pi' $i >> ../summary_statistics/window_pi.txt; done
