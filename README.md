@@ -48,4 +48,4 @@ Note: If you're running submission scripts that go back to BEFORE Step_07, you'l
 
 3. Execute phylo50kbp_array.sh. This'll take awhile (at least 1 day).
 
-4. 
+4. Run both parts of Step 04 in interactive sessions, then transfer tree files to local computer.
