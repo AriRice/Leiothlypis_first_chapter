@@ -9,6 +9,7 @@
 #SBATCH --mail-user=arrice@ttu.edu
 #SBATCH --mail-type=ALL
 
+source ~/anaconda3/etc/profile.d/conda.sh
 conda activate vcftools
 
 # define main working directory
