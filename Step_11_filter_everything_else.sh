@@ -34,12 +34,12 @@ vcftools --vcf ${workdir}/04_filtered_vcf/${region_array}.vcf --remove excluded_
 # bgzip and tabix index files that will be subdivided into windows
 # directory 1
 bgzip ${workdir}/06_phylogenies_and_summstats/${region_array}__phylostats.recode.vcf
-bgzip ${workdir}/07_TreeMix/${region_array}__Treemix_Nothin.recode.vcf
+bgzip ${workdir}/07_TreeMix/${region_array}__Treemix_nothin.recode.vcf
 bgzip ${workdir}/07_TreeMix/${region_array}__Treemix_50kbpthin.recode.vcf
 bgzip ${workdir}/11_ABBA_BABA/${region_array}__ABBA_BABA.recode.vcf
 
 #tabix
 tabix -p vcf ${workdir}/06_phylogenies_and_summstats/${region_array}__phylostats.recode.vcf.gz
-tabix -p vcf ${workdir}/07_TreeMix/${region_array}__Treemix_Nothin.recode.vcf.gz
+tabix -p vcf ${workdir}/07_TreeMix/${region_array}__Treemix_nothin.recode.vcf.gz
 tabix -p vcf ${workdir}/07_TreeMix/${region_array}__Treemix_50kbpthin.recode.vcf.gz
 tabix -p vcf ${workdir}/11_ABBA_BABA/${region_array}__ABBA_BABA.recode.vcf.gz
