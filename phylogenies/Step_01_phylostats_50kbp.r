@@ -74,8 +74,10 @@
 	write("#SBATCH --mail-type=ALL", file=a.script, append=T)
 	write(paste("#SBATCH --array=1-", n_array_jobs, sep=""), file=a.script, append=T)
 	write("", file=a.script, append=T)
-	write("module load gcc/10.1.0 r/4.0.2", file=a.script, append=T)
-	write("module load gcc/10.1.0 bcftools/1.10.2", file=a.script, append=T)
+	write("source ~/anaconda3/etc/profile.d/conda.sh", file=a.script, append=T)
+	write("conda activate vcftools", file=a.script, append=T)
+	write("conda activate R", file=a.script, append=T)
+	write("conda activate bcftools", file=a.script, append=T)
 	write("", file=a.script, append=T)
 
 	write("# Set the number of runs that each SLURM task should do", file=a.script, append=T)
