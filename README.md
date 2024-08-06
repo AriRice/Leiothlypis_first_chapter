@@ -40,16 +40,16 @@ Note: Step_02_align.sh needs to be updated to run on a different computing clust
     11.1. Run the "Step_11_filter_everything_else.sh" script.
 
 # Phylogenies and whole-genome stats
-1. Delete the sex chromosomes in the 06_phylogenies_and_summstats folder. 
+1. Excecute Step_01_phylostats_50kbp.r in R. This will write an array job submission script (phylo50kbp_array.sh) and 3 helper files in /06_phylogenies_and_summstats/.
 
-2. Excecute Step_01_phylostats_50kbp.r in R. This will write an array job submission script (phylo50kbp_array.sh) and 3 helper files in /06_phylogenies_and_summstats/.
-
-3. Go to this folder and add 4 more R scripts (calculate_windows, create_fasta, create_fasta_from_vcf, and window_stat_calculations). No need to modify them.
+2. Go to this folder and add 4 more R scripts (calculate_windows, create_fasta, create_fasta_from_vcf, and window_stat_calculations). No need to modify them.
 
    2.1. Add popmap_phylo.txt to this folder.
 
    2.2. Add a subfolder called "windows".
 
-4. Execute phylo50kbp_array.sh. This'll take awhile (at least 1 day).
+3. Execute phylo50kbp_array.sh. This'll take awhile (at least 1 day).
+
+4. Go to the windows folder and delete all tree files built with sex chromosomes (BUT DON'T DELETE THE SUMMARY STATS FILES!)
 
 5. Run both parts of Step 04 in interactive sessions, then transfer tree files to local computer.
