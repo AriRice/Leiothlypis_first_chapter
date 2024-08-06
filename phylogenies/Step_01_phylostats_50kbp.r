@@ -75,9 +75,7 @@
 	write(paste("#SBATCH --array=1-", n_array_jobs, sep=""), file=a.script, append=T)
 	write("", file=a.script, append=T)
 	write("source ~/anaconda3/etc/profile.d/conda.sh", file=a.script, append=T)
-	write("conda activate vcftools", file=a.script, append=T)
-	write("conda activate R", file=a.script, append=T)
-	write("conda activate bcftools", file=a.script, append=T)
+	write("conda activate phylostats_env", file=a.script, append=T)
 	write("", file=a.script, append=T)
 
 	write("# Set the number of runs that each SLURM task should do", file=a.script, append=T)
