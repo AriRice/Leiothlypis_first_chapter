@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --chdir=./01_bam_files
 #SBATCH --job-name=ca_depth
-#SBATCH --partition quanah
+#SBATCH --partition nocona
 #SBATCH --nodes=1 --ntasks=3
 #SBATCH --time=48:00:00
 #SBATCH --mem-per-cpu=8G
