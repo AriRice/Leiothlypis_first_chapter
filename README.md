@@ -50,6 +50,4 @@ Note: Step_02_align.sh needs to be updated to run on a different computing clust
 
 3. Execute phylo50kbp_array.sh. This'll take awhile (at least 1 day).
 
-4. Go to the windows folder and delete all tree files built with sex chromosomes (BUT DON'T DELETE THE SUMMARY STATS FILES!)
-
 5. Run both parts of Step 04 in interactive sessions, then transfer tree files to local computer.
