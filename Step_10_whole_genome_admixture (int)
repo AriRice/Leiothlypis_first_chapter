@@ -3,7 +3,7 @@ interactive -p quanah
 
 # combine all chromosome vcfs into one vcf (you can do all of this for the unthinned dataset as well, but it takes forever and is not as useful)
 # 50kbp thinning
-grep "#" CM019901__structure_50kbpthin.recode.vcf > 50kbpthin.vcf
+grep "#" CM019901.1__structure_50kbpthin.recode.vcf > 50kbpthin.vcf
 for i in $( ls *structure_50kbpthin* ); do grep -v "#" $i >> 50kbpthin.vcf; done
 
 # make chromosome map for the vcfs
