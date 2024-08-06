@@ -10,6 +10,7 @@ for i in $( ls *structure_50kbpthin* ); do grep -v "#" $i >> 50kbpthin.vcf; done
 grep -v "#" 50kbpthin.vcf | cut -f 1 | uniq | awk '{print $0"\t"$0}' > chrom_map.txt
 
 # run vcftools for the combined vcf
+conda activate vcftools
 vcftools --vcf 50kbpthin.vcf  --plink --chrom-map chrom_map.txt --out 50kbpthin 
 
 # convert with plink (the old version bc I've had errors with Plink2)
