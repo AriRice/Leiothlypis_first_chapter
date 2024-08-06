@@ -3,6 +3,8 @@
 ## Delete tree files associated with the sex chromosomes
 rm windows/RAxML_bipartitions.CM019933*.tre
 rm windows/RAxML_bipartitions.CM019934*.tre
+rm windows/RAxML_bootstrap.CM019933*.tre
+rm windows/RAxML_bootstrap.CM019934*.tre
 
 ## Make a new folder in phylostats called "final_tree_products"
 
