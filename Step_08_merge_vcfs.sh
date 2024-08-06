@@ -10,7 +10,8 @@
 #SBATCH --mail-type=ALL
 #SBATCH --array=1-32
 
-module load intel/18.0.3.222 bcftools/1.9
+source ~/anaconda3/etc/profile.d/conda.sh
+conda activate vcftools
 
 # define main working directory
 workdir=/lustre/scratch/arrice/Ch1_Leiothlypis
