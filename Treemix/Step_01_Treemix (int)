@@ -6,13 +6,16 @@
 
 # Import the vcf2treemix.sh script from here: https://github.com/speciationgenomics/scripts/blob/master/vcf2treemix.sh 
 
-# Download the plink2treemix.py script. 
+# Download the plink2treemix.py script and put it somewhere.  
 
-# Modify vcf2treemix.sh script so that vcftools and plink are activated within it. 
+# Modify vcf2treemix.sh script so that vcftools and plink are activated within it, and that the direct path to plink2treemix.py is listed. 
 
 # Merge chromosome-level vcfs. Starting with the thinned dataset. 
 gunzip *Treemix_50kbpthin.recode.vcf.gz
 grep "#" CM019901.1__Treemix_50kbpthin.recode.vcf > TM_50kbpthin.vcf
 for i in $( ls *Treemix_50kbpthin.recode.vcf ); do grep -v "#" $i >> TM_50kbpthin.vcf; done
 gzip *.vcf
+
+# Then this:
+bash vcf2treemix.sh TM_50kbpthin.vcf.gz birbs.clust
 
