@@ -11,7 +11,7 @@
 #SBATCH --array=1-32
 
 source ~/anaconda3/etc/profile.d/conda.sh
-conda activate vcftools
+conda activate bcftools
 
 # define main working directory
 workdir=/lustre/scratch/arrice/Ch1_Leiothlypis
