@@ -8,7 +8,8 @@
 #SBATCH --mail-user=arrice@ttu.edu
 #SBATCH --mail-type=ALL
 
-module load intel/18.0.3.222 samtools/1.9
+source ~/anaconda3/etc/profile.d/conda.sh
+conda activate samtools
 
 samtools depth -a M1_luciae_1_final.bam M3_crissalis_1_final.bam M4_crissalis_2_final.bam M5_crissalis_3_final.bam \
 M6_celata_1_final.bam M7_crissalis_4_final.bam M8_peregrina_1_final.bam M9_peregrina_2_final.bam \
