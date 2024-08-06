@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --chdir=./
 #SBATCH --job-name=genotype
-#SBATCH --partition quanah
+#SBATCH --partition nocona
 #SBATCH --time=48:00:00
 #SBATCH --nodes=1 --ntasks=4
 #SBATCH --time=48:00:00
