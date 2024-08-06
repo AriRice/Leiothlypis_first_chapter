@@ -11,3 +11,8 @@
 # Modify vcf2treemix.sh script so that vcftools and plink are activated within it. 
 
 # Merge chromosome-level vcfs. Starting with the thinned dataset. 
+gunzip *Treemix_50kbpthin.recode.vcf.gz
+grep "#" CM019901.1__Treemix_50kbpthin.recode.vcf > TM_50kbpthin.vcf
+for i in $( ls *Treemix_50kbpthin.recode.vcf ); do grep -v "#" $i >> TM_50kbpthin.vcf; done
+gzip *.vcf
+
