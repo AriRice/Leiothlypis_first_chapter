@@ -1,0 +1,13 @@
+# Get an interactive session. 
+
+# Enter the 07_Treemix folder. 
+
+# Make a .clust file. 
+
+# Import the vcf2treemix.sh script from here: https://github.com/speciationgenomics/scripts/blob/master/vcf2treemix.sh 
+
+# Download the plink2treemix.py script. 
+
+# Modify vcf2treemix.sh script so that vcftools and plink are activated within it. 
+
+# Merge chromosome-level vcfs. Starting with the thinned dataset. 
