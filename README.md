@@ -1,6 +1,6 @@
 Contains everything from the previous 3 Leiothlypis repositories... but better. 
 
-Note: If you're running submission scripts that go back to BEFORE Step_07, you'll need to to change the partition from quanah to nocona and call upon the required software in a different manner (either using what's installed on nocona or using a conda environment). 
+Note: Step_02_align.sh needs to be updated to run on a different computing cluster where some of those software packages aren't already installed. 
 
 # Aligning, filtering, and genotyping
 1. Run Step 1 interactively. Follow ALL the directions. 
