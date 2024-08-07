@@ -4,10 +4,9 @@
 
 # Make a .clust file. 
 
-# Import the vcf2treemix.sh script from here: https://github.com/speciationgenomics/scripts/blob/master/vcf2treemix.sh 
-# Or... just use the version that I modified. That would actually be better. 
-
-# Download the plink2treemix.py script and put it somewhere.  
+# The following is akin to the the vcf2treemix.sh script from here: https://github.com/speciationgenomics/scripts/blob/master/vcf2treemix.sh. 
+# ...But less problematic. 
+# It requires a plink2treemix.py script. Download that and put it in the main TreeMix folder.  
 
 # Merge chromosome-level vcfs. Starting with the thinned dataset. 
 gunzip *Treemix_50kbpthin.recode.vcf.gz
@@ -16,5 +15,34 @@ for i in $( ls *Treemix_50kbpthin.recode.vcf ); do grep -v "#" $i >> TM_50kbpthi
 gzip *.vcf
 
 # Then this:
-bash vcf2treemix.sh TM_50kbpthin.vcf.gz birbs.clust
+conda activate bcftools
+bcftools view -H TM_50kbpthin.vcf.gz | cut -f 1 | uniq | awk '{print $0"\t"$0}' > TM_50kbpthin.chrom-map.txt
+conda activate vcftools
+vcftools --gzvcf TM_50kbpthin.vcf.gz --plink --chrom-map TM_50kbpthin.chrom-map.txt --out TM_50kbpthin
+conda activate plink
+plink --file TM_50kbpthin --make-bed --out TM_50kbpthin --allow-extra-chr 0
+plink --bfile TM_50kbpthin --freq --missing --within birbs.clust --out TM_50kbpthin --allow-extra-chr 0
+gzip TM_50kbpthin.frq.strat
 
+# And then this: 
+conda activate old_python
+python plink2treemix.py TM_50kbpthin.frq.strat.gz TM_50kbpthin.treemix.frq.gz
+
+# unzip allele frequency information
+gunzip TM_50kbpthin.treemix.frq.gz
+gunzip TM_50kbpthin.frq.strat.gz
+
+# make a file with the positions
+awk 'BEGIN{print "scaffold_pos\tscaffold\tpos"}{split($2,pos,":");print $2"\t"pos[1]"\t"pos[2]}' TM_50kbpthin.map > TM_50kbpthin.positions
+paste TM_50kbpthin.positions TM_50kbpthin.treemix.frq > TM_50kbpthin.frequencies
+
+
+### CAN't figure out this next part...
+awk '{printf $0
+        for(i = 7; i <= NF; i++){
+                split($i,values,",")
+                if((values[1]+values[2])>0) freq=values[1]/(values[1]+values[2])
+                else freq=0
+                printf freq"\t"
+        }
+	printf "\n"}' TM_50kbpthin.frequencies > TM_50kbpthin.frequencies2
