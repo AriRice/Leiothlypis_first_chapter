@@ -47,8 +47,14 @@ awk '{printf $0
 
 ### Now edit the 0's in the header to say freq_<name_of_species>. Use a sed command if it makes you feel better. ###
 
+# zip the file 
+gzip TM_50kbpthin.treemix.frq 
+
+
+
+
+##########################################################################################################################
 ###### I don't really understand the point of this line so... idk. Skip it. It was part of the original script ###########
 awk 'BEGIN{scaffold="";pos=0;newpos=0}
         {if($2==scaffold){newpos=pos+$3}else{scaffold=$2;pos=newpos};chpos=pos+$3;print $0,chpos}' \
         TM_50kbpthin.frequencies2 > TM_50kbpthin.frequencies.newpos
-
