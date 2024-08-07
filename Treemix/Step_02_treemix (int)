@@ -7,4 +7,9 @@ do
  treemix -i TM_50kbpthin.treemix.frq.gz -m $i -o TreeMix_output/TM_50kbpthin.$i -root outgroup -bootstrap -k 500 > 50kbp_thin_treemix_${i}_log &
 done
 
-# 
+# Export all the treemix output files to a folder on your local computer. 
+# Make sure that the following are also in said folder: 
+# 1) plotting_funcs.R (find it online)
+# 2) New_Treemix_Plotting_50kbp.R
+
+# Get your Treemix plots and look at the .llik files to see which one makes the most sense. 
