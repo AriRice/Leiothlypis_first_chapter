@@ -36,13 +36,19 @@ gunzip TM_50kbpthin.frq.strat.gz
 awk 'BEGIN{print "scaffold_pos\tscaffold\tpos"}{split($2,pos,":");print $2"\t"pos[1]"\t"pos[2]}' TM_50kbpthin.map > TM_50kbpthin.positions
 paste TM_50kbpthin.positions TM_50kbpthin.treemix.frq > TM_50kbpthin.frequencies
 
-
-### CAN't figure out this next part...
 awk '{printf $0
-        for(i = 7; i <= NF; i++){
+        for(i = 4; i <= NF; i++){
                 split($i,values,",")
                 if((values[1]+values[2])>0) freq=values[1]/(values[1]+values[2])
                 else freq=0
-                printf freq"\t"
+                printf "\t"freq
         }
 	printf "\n"}' TM_50kbpthin.frequencies > TM_50kbpthin.frequencies2
+
+### Now edit the 0's in the header to say freq_<name_of_species>. Use a sed command if it makes you feel better. ###
+
+###### I don't really understand the point of this line so... idk. Skip it. It was part of the original script ###########
+awk 'BEGIN{scaffold="";pos=0;newpos=0}
+        {if($2==scaffold){newpos=pos+$3}else{scaffold=$2;pos=newpos};chpos=pos+$3;print $0,chpos}' \
+        TM_50kbpthin.frequencies2 > TM_50kbpthin.frequencies.newpos
+
