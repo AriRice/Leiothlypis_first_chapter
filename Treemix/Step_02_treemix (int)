@@ -1,1 +1,10 @@
+# Get an interactive session in the Treemix folder. 
+# This will test 0-5 migration edges. 
 
+conda activate treemix
+for i in {0..5}
+do
+ treemix -i TM_50kbpthin.treemix.frq.gz -m $i -o TreeMix_output/TM_50kbpthin.$i -root outgroup -bootstrap -k 500 > 50kbp_thin_treemix_${i}_log &
+done
+
+# 
