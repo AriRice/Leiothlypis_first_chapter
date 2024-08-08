@@ -7,7 +7,11 @@ Note: Step_02_align.sh needs to be updated to run on a different computing clust
 # Aligning, filtering, and genotyping
 1. Run Step 1 interactively. Follow ALL the directions. 
 
-2. Run the alignment script (step 2) from the 08_align_script folder.
+2. Run the alignment script (step 2) from the 08_align_script folder. Step_02b_mitogenome.sh can be combined into this. 
+
+    2.1. Go to the mitogenome folder and run extract_this.sh to extract a subset of mtDNA for each sample.
+
+    2.2. Import the mtDNA subsets into Geneious and blast em to make sure they're actually Leiothlypis. 
 
 3. Run step 3 interactively from the 08_align_script folder. 
 
