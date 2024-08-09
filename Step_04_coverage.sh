@@ -17,10 +17,10 @@ M11_ruficapilla_1_final.bam M12_ruficapilla_2_final.bam M13_celata_2_final.bam M
 M17_ruficapilla_4_final.bam M18_peregrina_5_final.bam M19_celata_4_final.bam M20_celata_5_final.bam \
 M21_virginiae_1_final.bam M22_crissalis_5_final.bam M23_luciae_2_final.bam M24_luciae_3_final.bam M25_luciae_4_final.bam \
 M26_virginiae_2_final.bam M27_virginiae_3_final.bam M28_virginiae_4_final.bam M29_virginiae_5_final.bam \
-M30_luciae_5_final.bam G_poliocephala_KU25093_final.bam G_poliocephala_KU33403_final.bam \
-G_poliocephala_KU33414_final.bam G_poliocephala_KU33542_final.bam \
-G_poliocephala_KU9041_final.bam N16_peregrina_6_final.bam N17_peregrina_7_final.bam N18_ruficapilla_6_final.bam \
-N19_ruficapilla_7_final.bam N20_ruficapilla_8_final.bam N21_ruficapilla_9_final.bam > leiothlypis_coverage.txt
+M30_luciae_5_final.bam N16_peregrina_6_final.bam N17_peregrina_7_final.bam N18_ruficapilla_6_final.bam \
+N19_ruficapilla_7_final.bam N20_ruficapilla_8_final.bam N21_ruficapilla_9_final.bam G_poliocephala_KU25093_final.bam \
+G_poliocephala_KU33403_final.bam G_poliocephala_KU33414_final.bam G_poliocephala_KU33542_final.bam \
+G_poliocephala_KU9041_final.bam > leiothlypis_coverage.txt
 
 # break up the depth files into single column files for each individual
 
