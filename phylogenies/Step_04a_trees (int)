@@ -1,10 +1,10 @@
 ## Get an interactive session with at least 4 cores. 
 
-## Delete tree files associated with the sex chromosomes
-rm windows/RAxML_bipartitions.CM019933*.tre
-rm windows/RAxML_bipartitions.CM019934*.tre
-rm windows/RAxML_bootstrap.CM019933*.tre
-rm windows/RAxML_bootstrap.CM019934*.tre
+## DON'T DELETE tree files associated with the sex chromosomes! Just put them somewhere else so you can use them for TWISST! 
+mv windows/RAxML_bipartitions.CM019933*.tre ./whatever
+mv windows/RAxML_bipartitions.CM019934*.tre ./whatever
+mv windows/RAxML_bootstrap.CM019933*.tre ./whatever
+mv windows/RAxML_bootstrap.CM019934*.tre ./whatever
 
 ## Make a new folder in phylostats called "final_tree_products"
 
