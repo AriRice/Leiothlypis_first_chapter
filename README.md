@@ -67,9 +67,11 @@ Note: Step_02_align.sh needs to be updated to run on a different computing clust
 
 3. Export the weights output and the metadata ("Leiothlypis_50kbp_data") to a local computer.
 
-4. Plot in R (Script included here). 
+4. Plot in R (Script included here, requires another plot.twisst.R script from the developers). 
 
 # Treemix
 I didn't put any methods on Github because it was very straightforward and ultimately didn't tell me anything. 
 
+# D statistics (ABBA-BABA tests across genomic windows)
+1. 
 
