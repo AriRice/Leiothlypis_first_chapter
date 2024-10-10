@@ -56,12 +56,17 @@ Note: Step_02_align.sh needs to be updated to run on a different computing clust
 
 4. Run both parts of Step 04 in interactive sessions, then transfer tree and stats files to local computer for plotting.
 
-5.  Plot trees in Figtree (instructions not included here)
+5. Plot trees in Figtree (instructions not included here)
 
-6. Plot windowed stats in R (script not included here...yet)
+6. Plot windowed stats in R (script not included here)
 
 # TWISST (For weighting topologies and plotting tree discordance across windows)
-1. 
+1. Make a folder for TWISST within the phylostats folder and copy "Leiothlypis_50kbp.trees.gz" into here (the output 
+
+2. Download the python script for TWISST and put it somewhere (I put it in my home directory).
+3. 
+
+4. Run the "TWISST command" in an interactive session within 
 
 # Treemix
 I didn't put any methods on Github because it was very straightforward and ultimately didn't tell me anything. 
