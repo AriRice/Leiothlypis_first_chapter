@@ -1,3 +1,4 @@
+# Here's the way I did it. 
 python twisst.py -t Leiothlypis_50kbp.trees -w Leiothlypis_50kbp.weights \
 -g peregrina M18_peregrina_5,M9_peregrina_2,M14_peregrina_4,M8_peregrina_1,N17_peregrina_7 \
 -g ruficapilla M17_ruficapilla_4,M11_ruficapilla_1,M12_ruficapilla_2,N18_ruficapilla_6,N19_ruficapilla_7 \
@@ -8,5 +9,6 @@ python twisst.py -t Leiothlypis_50kbp.trees -w Leiothlypis_50kbp.weights \
 -g outgroup Geothlypis_poliocephala_KU_25093_AHUA,Geothlypis_poliocephala_KU_33403_NSG,Geothlypis_poliocephala_KU_33414_NSG,Geothlypis_poliocephala_KU_33542_ALA,Geothlypis_poliocephala_KU_9041_CHAL \
 --outgroup outgroup
 
+# Alternatively, you can specify who belongs to what group in a groups.tsv file. 
 python twisst.py -t Leiothlypis_50kbp.trees -w Leiothlypis_50kbp.weights -g peregrina -g ruficapilla -g virginiae -g luciae -g celata -g crissalis -g outgroup \
 --groupsFile groups.tsv --outgroup outgroup
