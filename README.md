@@ -54,6 +54,14 @@ Note: Step_02_align.sh needs to be updated to run on a different computing clust
 
 3. Execute phylo50kbp_array.sh. This'll take awhile (at least 1 day).
 
-4. Run both parts of Step 04 in interactive sessions, then transfer tree files to local computer.
-   
-6. Look at 
+4. Run both parts of Step 04 in interactive sessions, then transfer tree and stats files to local computer for plotting.
+
+5.  Plot trees in Figtree (instructions not included here)
+
+6. Plot windowed stats in R (script not included here...yet)
+
+# TWISST (For weighting topologies and plotting tree discordance across windows)
+1. 
+
+# Treemix
+I didn't put any methods on Github because it was very straightforward and ultimately didn't tell me anything. 
