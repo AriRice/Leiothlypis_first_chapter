@@ -1,0 +1,26 @@
+### Merge chromosome-level D stats into whole-genome D stats for F-branch metric. 
+# Run it from the Dstats_by_chromosome folder
+
+~/Dsuite/Build/Dsuite DtriosCombine Leio_Sets_CM019901.1 Leio_Sets_CM019902.1 Leio_Sets_CM019903.1 Leio_Sets_CM019904.1 Leio_Sets_CM019905.1 \
+Leio_Sets_CM019906.1 Leio_Sets_CM019907.1 Leio_Sets_CM019908.1 Leio_Sets_CM019909.1 Leio_Sets_CM019910.1 Leio_Sets_CM019911.1 Leio_Sets_CM019912.1 \
+Leio_Sets_CM019913.1 Leio_Sets_CM019914.1 Leio_Sets_CM019915.1 Leio_Sets_CM019916.1 Leio_Sets_CM019917.1 Leio_Sets_CM019918.1 Leio_Sets_CM019919.1 \
+Leio_Sets_CM019920.1 Leio_Sets_CM019921.1 Leio_Sets_CM019922.1 Leio_Sets_CM019923.1 Leio_Sets_CM019924.1 Leio_Sets_CM019925.1 Leio_Sets_CM019926.1 \
+Leio_Sets_CM019927.1 Leio_Sets_CM019928.1 Leio_Sets_CM019929.1 Leio_Sets_CM019930.1 Leio_Sets_CM019933.1 Leio_Sets_CM019934.1 -n whole_genome -t ../species_tree.nwk
+
+### Run the Fbranch metric on the whole-genome D stats output
+
+~/Dsuite/Build/Dsuite Fbranch ../species_tree.nwk XXX_tree.txt > XXX_Fbranch.txt
+python3 ~/Dsuite/utils/dtools.py XXX_Fbranch.txt species_tree.nwk
+
+### Concatenating windowed D stats data for plotting
+# Run it from the Dstats_by_windows folder
+
+for i in $( ls *tree.txt ); do awk 'NR == 1 {print $0 "\tname_file"; next;}{print $0 "\t" FILENAME;}' $i | grep -v 'P1' >> ../all_windows.txt; done
+cd ..
+sed "s/Leio_Sets_//g" all_windows.txt | sed "s/_tree.txt//g" | sed "s/__/\t/g" > all_windows_v2.txt
+grep 'P1' Leio_Sets_CM019901.1__100000001__100050000_tree.txt | sed "s/BABA/BABA\tchrom_number\tstart\tend/g" > ../Dstats_all_windows.txt 
+
+cat all_windows_v2.txt >> Dstats_all_windows.txt
+
+
+
