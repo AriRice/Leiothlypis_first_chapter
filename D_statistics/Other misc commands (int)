@@ -18,7 +18,7 @@ python3 ~/Dsuite/utils/dtools.py out_whole_genome_combined_Fbranch.txt ../specie
 for i in $( ls *tree.txt ); do awk 'NR == 1 {print $0 "\tname_file"; next;}{print $0 "\t" FILENAME;}' $i | grep -v 'P1' >> ../all_windows.txt; done
 cd ..
 sed "s/Leio_Sets_//g" all_windows.txt | sed "s/_tree.txt//g" | sed "s/__/\t/g" > all_windows_v2.txt
-grep 'P1' Leio_Sets_CM019901.1__100000001__100050000_tree.txt | sed "s/BABA/BABA\tchrom_number\tstart\tend/g" > ../Dstats_all_windows.txt 
+grep 'P1' Dstats_by_windows/Leio_Sets_CM019901.1__100000001__100050000_tree.txt | sed "s/BABA/BABA\tchrom_number\tstart\tend/g" > Dstats_all_windows.txt 
 
 cat all_windows_v2.txt >> Dstats_all_windows.txt
 
