@@ -10,7 +10,7 @@ Leio_Sets_CM019927.1 Leio_Sets_CM019928.1 Leio_Sets_CM019929.1 Leio_Sets_CM01993
 ### Run the Fbranch metric on the whole-genome D stats output
 
 ~/Dsuite/Build/Dsuite Fbranch ../species_tree.nwk out_whole_genome_combined_tree.txt > out_whole_genome_combined_Fbranch.txt
-python3 ~/Dsuite/utils/dtools.py out_whole_genome_combined_Fbranch.txt species_tree.nwk
+python3 ~/Dsuite/utils/dtools.py out_whole_genome_combined_Fbranch.txt ../species_tree.nwk
 
 ### Concatenating windowed D stats data for plotting
 # Run it from the Dstats_by_windows folder
