@@ -80,7 +80,11 @@ I didn't put any methods on Github because it was very straightforward and ultim
 
 3. Run the Dsuite submission scripts.
 
-4. Enter the Dstats_by_chromosome directory and get whole-genome information by combining everything (See "Other misc commands"). 
+4. Enter the Dstats_by_chromosome directory and get whole-genome information by combining everything (See "Other misc commands").
+
+5. Import the fbranch figure and list of all windows to your local computer. You can also combine the window-based stats into one text file and plot those, but I didn't use these for the paper.
+
+# With custom R scripts
 
 
 
