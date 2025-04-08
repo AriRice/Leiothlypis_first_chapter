@@ -39,4 +39,7 @@ for (( run=$START_NUM; run<=$END_NUM; run++ )); do
         tabix ${workdir}/${chrom_array}__ABBA_BABA.recode.vcf.gz ${chrom_array}:${start_array}-${end_array} >> ${workdir}/Dstats_by_windows/${chrom_array}__${start_array}__${end_array}.recode.vcf
 
         ~/Dsuite/Build/Dsuite Dtrios -n ${chrom_array}__${start_array}__${end_array} -t species_tree.nwk ${workdir}/Dstats_by_windows/${chrom_array}__${start_array}__${end_array}.recode.vcf Leio_Sets.txt -o ${workdir}/Dstats_by_windows/Leio_Sets
+
+        rm /lustre/scratch/arrice/Ch1_Leiothlypis/11_ABBA_BABA/Dstats_by_windows/${chrom_array}__${start_array}__${end_array}.recode.vcf
+
 done
