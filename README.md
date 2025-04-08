@@ -86,5 +86,6 @@ I didn't put any methods on Github because it was very straightforward and ultim
 
 # With custom R scripts
 
-
+1. Make a new folder in 11_ABBA_BABA called "fd_vs_D"
+2. Run both "make_it_simple" submission scripts to simplify vcfs (at window and chromosome levels). 
 
