@@ -73,6 +73,7 @@ Note: Step_02_align.sh needs to be updated to run on a different computing clust
 I didn't put any methods on Github because it was very straightforward and ultimately didn't tell me anything. 
 
 # D and fd statistics (ABBA-BABA tests)
+There are two ways in which we did this. 
 # With D-suite
 1. Go to the 11_ABBA_BABA folder and create the following files, scripts, and directories: (a) species_tree.nwk, (b) test_trios.txt, (c) the three helper files (same ones from the 06_phylogenies_and_summstats directory), (d) Leio_Sets.txt, (e) Dsuite_by_chromosome.sh, (f) Dsuite_by_windows.sh, (g) Dstats_by_chromosome (directory), (h) Dstats_by_windows (directory).
 
@@ -85,7 +86,17 @@ I didn't put any methods on Github because it was very straightforward and ultim
 5. Import the fbranch figure and list of all windows to your local computer. You can also combine the window-based stats into one text file and plot those, but I didn't use these for the paper.
 
 # With custom R scripts
+Note that with these scripts, D is pretty much the same as in Dsuite, but missing data is handled a little differently, so values may not be exact. Dsuite also had trouble calculating fd per window, which is why I'm using these scripts here. 
 
 1. Make a new folder in 11_ABBA_BABA called "fd_vs_D"
-2. Run both "make_it_simple" submission scripts to simplify vcfs (at window and chromosome levels). 
+   
+2. Run both "simplify" submission scripts to simplify vcfs (at window and chromosome levels).
+
+3. Make a new folder in here called "windows" and another one called "chrom_level"
+
+4. Make the "D and fD stats" R scripts, along with the submission scripts (run_introgression) that go along with them. Make sure the chromosome-level ones are placed inside the chrom_level folder and run from there. NOTE: You need a LOT of CPU for the chromosome-level one to run on the larger chromosomes (Namely 1, 2, 3, and Z). You may need to break it up into several submission scripts.
+
+5. Use "Even MORE misc commands (int)" to extract f-branch metrics and combine things into singular files.
+   
+6. Export these to desktop R for plotting.
 
