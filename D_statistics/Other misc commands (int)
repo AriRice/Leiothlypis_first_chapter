@@ -1,6 +1,6 @@
 ### Merge chromosome-level D stats into whole-genome D stats for F-branch metric. 
-# Run it from the Dstats_by_chromosome folder
-# W chromosome removed
+# Run it from the Dstats_by_chromosome folder.
+# W chromosome should be removed at this point.
 
 ~/Dsuite/Build/Dsuite DtriosCombine Leio_Sets_CM019901.1 Leio_Sets_CM019902.1 Leio_Sets_CM019903.1 Leio_Sets_CM019904.1 Leio_Sets_CM019905.1 \
 Leio_Sets_CM019906.1 Leio_Sets_CM019907.1 Leio_Sets_CM019908.1 Leio_Sets_CM019909.1 Leio_Sets_CM019910.1 Leio_Sets_CM019911.1 Leio_Sets_CM019912.1 \
