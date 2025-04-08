@@ -1,0 +1,31 @@
+##### combine the windowed output into a single file.
+
+# first add a header
+grep 'start' CM019901.1__100500001__100550000__stats.txt > ../window_introgression.txt
+# add the  stats to the file
+for i in $( ls *stats.txt ); do grep 'outgroup' $i >> ../window_introgression.txt; done
+
+##### combine the chrom-level output into a single file.
+
+# first add a header
+grep 'p1' CM019901.1__ABBA_BABA__stats.txt > ../chrom_introgression.txt
+# add the  stats to the file
+for i in $( ls *stats.txt ); do grep 'outgroup' $i >> ../chrom_introgression.txt; done
+
+###########################
+
+# window-based fbranch stats
+
+for i in $(ls *stats.txt); do
+	grep 'celata' $i > temp.txt;
+	sort temp.txt -k 10 | head -n 1 >> fbranch_windows.txt;
+	rm temp.txt;
+	done
+	
+# chromosome-based fbranch stats
+
+for i in $(ls *stats.txt); do
+	grep 'celata' $i > temp.txt;
+	sort temp.txt -k 8 | head -n 1 >> fbranch_chrom.txt;
+	rm temp.txt;
+	done
