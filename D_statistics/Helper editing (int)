@@ -1,0 +1,14 @@
+# Get an interactive session and perform these steps in this EXACT ORDER
+
+sed 's/..$//' tree_helper_chrom.txt > tree_helper_chrom1.txt
+rm tree_helper_chrom.txt
+mv tree_helper_chrom1.txt tree_helper_chrom.txt
+
+paste tree_helper_chrom.txt tree_helper_start.txt tree_helper_end.txt | column -s $'\t' -t > combined_helper.txt
+grep -v -e "x" -e "WSPJ" -e "CM019931" -e "CM019932" combined_helper.txt > filtered_helper.txt
+
+awk '{ print $1 }' filtered_helper.txt > tree_helper_chrom.txt
+awk '{ print $2 }' filtered_helper.txt > tree_helper_start.txt
+awk '{ print $3 }' filtered_helper.txt > tree_helper_end.txt
+
+rm filtered_helper.txt
