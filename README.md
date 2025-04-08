@@ -72,6 +72,15 @@ Note: Step_02_align.sh needs to be updated to run on a different computing clust
 # Treemix
 I didn't put any methods on Github because it was very straightforward and ultimately didn't tell me anything. 
 
-# D statistics (ABBA-BABA tests across genomic windows)
-1. 
+# D and fd statistics (ABBA-BABA tests)
+# For D suite
+1. Go to the 11_ABBA_BABA folder and create the following files, scripts, and directories: (a) species_tree.nwk, (b) test_trios.txt, (c) the three helper files (same ones from the 06_phylogenies_and_summstats directory), (d) Leio_Sets.txt, (e) Dsuite_by_chromosome.sh, (f) Dsuite_by_windows.sh, (g) Dstats_by_chromosome (directory), (h) Dstats_by_windows (directory).
+
+2. Edit the helper files to get rid of reference chromosomes/ windows that were never sequenced (Helper editing (int)).
+
+3. Run the Dsuite submission scripts.
+
+4. Enter the Dstats_by_chromosome directory and get whole-genome information with "combine_everything.sh"
+
+
 
