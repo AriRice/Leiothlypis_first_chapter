@@ -100,3 +100,17 @@ Note that with these scripts, D is pretty much the same as in Dsuite, but missin
    
 6. Export these to desktop R for plotting.
 
+# Gene and site concordance factors
+I did this part at the very end and will simply list the instructions here. 
+
+1. Make a new directory
+
+2. Assuming you have already gotten your trees/phylogenies, move "leiothlypis_50kbp.tre" and "Leiothlypis_50kbp.trees" into this directory
+
+3. Move the .tre file to your local computer, open it up in figtree, save it in newick format, and move the .nwk file back into that directory (I'm sure there's a much easier way to do this, but this is because IQtree is picky about tree file formats). 
+
+4. Go back and re-run the phylostats_50kbp array job, but make sure the fastas generated for each window are NOT deleted. These will be essential for getting site concordance factors.
+
+5. Concatenate ALL of these fastas into a single one using seqkit and move the massive fasta file into your new IQtree directory.
+
+6. Run Get_scf_gcf.sh. It's pretty self-explanatory from there. 
