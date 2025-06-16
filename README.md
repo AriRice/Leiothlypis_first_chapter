@@ -113,4 +113,7 @@ I did this part at the very end and will simply list the instructions here.
 
 5. Concatenate ALL of these fastas into a single one using seqkit and move the massive fasta file into your new IQtree directory.
 
-6. Run Get_scf_gcf.sh. It's pretty self-explanatory from there. 
+6. Run Get_scf_gcf.sh. It's pretty self-explanatory from there.
+
+# G-PhoCs
+https://github.com/AriRice/Leiothlypis-GPHOCS/blob/main/README.md 
