@@ -2,8 +2,6 @@ Contains everything from the previous 3 Leiothlypis repositories... but better.
 
 Requires conda environments to be set up appropriately for each job/ submission script (for instance, if the script for an array job requires bcftools, vcftools, and some other thing, create an environment with all three of those programs and activate it at the beginning of said script). 
 
-Note: Step_02_align.sh needs to be updated to run on a different computing cluster where some of those software packages aren't already installed (preferably in a conda environment). 
-
 # Aligning, filtering, and genotyping
 1. Run Step 1 interactively. Follow ALL the directions. 
 
